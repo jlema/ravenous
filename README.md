@@ -4,7 +4,7 @@
 
 Ravenous is a Yelp-like React app to search for restaurants using the Yelp API. Part of the [Create a Front-End App with React Path at CodeCademy](https://www.codecademy.com/learn/paths/build-web-apps-with-react).
 
-The deployed app is [available here](https://jlema.github.io/ravenous/). A screenshot of the restaurant search functionality is below.
+The deployed app is [available here](https://jlema-ravenous.netlify.app/). A screenshot of the restaurant search functionality is below.
 
 ![Screenshot of Ravenous React app's main screen with restaurant search feature](screenshot.png?raw=true)
 
