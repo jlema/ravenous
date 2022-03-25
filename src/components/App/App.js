@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import BusinessList from '../BusinessList/BusinessList'
 import SearchBar from '../SearchBar/SearchBar'
-import { Yelp } from '../../util/Yelp'
 
 class App extends React.Component {
 	constructor(props) {
@@ -13,12 +12,15 @@ class App extends React.Component {
 		this.searchYelp = this.searchYelp.bind(this)
 	}
 
-	searchYelp(term, location, sortBy) {
-		Yelp.search(term, location, sortBy).then(businesses =>
-			this.setState({
-				businesses: businesses,
+	async searchYelp(term, location, sortBy) {
+		const url = `/.netlify/functions/yelp?term=${term}&location=${location}&sortBy=${sortBy}`
+		await fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				this.setState({
+					businesses: data.businesses,
+				})
 			})
-		)
 	}
 
 	render() {

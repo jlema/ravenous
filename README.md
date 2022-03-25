@@ -25,6 +25,7 @@ The deployed app is [available here](https://jlema.github.io/ravenous/). A scree
 - Git and GitHub
 - HTML
 - JavaScript
+- Netlify (CLI, functions)
 - Node.js
 - React, ReactDOM
 - Yelp API
@@ -35,16 +36,17 @@ The deployed app is [available here](https://jlema.github.io/ravenous/). A scree
 
 ```bash
 npm i
-npm start
+npx netlify dev
 ```
 
 ### Deployment
 
-This deploys the app to GitHub pages
+This deploys the app to Netlify
 
 ```bash
 npm i
-npm run deploy
+npx netlify build
+npx netlify deploy
 ```
 
 ## References
